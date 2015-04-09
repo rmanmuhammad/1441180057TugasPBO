@@ -1,22 +1,22 @@
-// Example to illustrate Method Overloading
 public class TestMethodOverloading {
-   public static int average(int n1, int n2) {          // A
-      return (n1+n2)/2;
-   }
- 
-   public static double average(double n1, double n2) { // B
-      return (n1+n2)/2;
-   }
- 
-   public static int average(int n1, int n2, int n3) {  // C
-      return (n1+n2+n3)/3;
-   }
+	public static int average(int nsatu, int ndua){  				//A
+		return (nsatu+ndua)/2;
+	}
 
-   public static void main(String[] args) {
-      System.out.println(average(1, 2));     // Use A
-      System.out.println(average(1.0, 2.0)); // Use B
-      System.out.println(average(1, 2, 3));  // Use C
-      System.out.println(average(1.0, 2));   // Use B - int 2 implicitly casted to double 2.0
-      // average(1, 2, 3, 4); // Compilation Error - No matching method
-   }
+	public static double average(double nsatu, double ndua){		//B
+		return (nsatu+ndua)/2;
+	}
+
+	public static int average(int nsatu, int ndua, int ntiga){      //C
+		return (nsatu+ndua+ntiga)/3;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(average(1, 2));			//use A
+		System.out.println(average(1.0, 2.0));		//use B
+		System.out.println(average(1, 2, 3));		//use C
+		System.out.println(average(1.0, 2));		//use B
+
+		// average (1, 2, 3, 4);
+	}
 }
